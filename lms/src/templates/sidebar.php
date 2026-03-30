@@ -3,7 +3,7 @@
 $role = $_SESSION['role'] ?? 'guest';
 // We use basename to highlight active links, but we need robust checking
 $current_page = basename($_SERVER['PHP_SELF']);
-$base_url = "/lms"; // Hardcoded base URL for reliability
+$base_url = ""; // Hardcoded base URL for reliability
 if ($role !== 'guest') {
     echo '<script>document.documentElement.setAttribute("data-lms-role",' . json_encode($role, JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) . ');</script>' . "\n";
 }
